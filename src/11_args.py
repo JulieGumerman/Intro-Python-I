@@ -68,7 +68,7 @@ print(f3(8))     # Should print 9
 
 def f4(**kwargs):
     for key, value in kwargs.items():
-        print("%s = %s" %(key, value))
+        print("key: %s, value: %s" %(key, value))
 
 
 # Should print
