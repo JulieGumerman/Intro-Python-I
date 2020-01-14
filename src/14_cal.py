@@ -22,3 +22,21 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+#you need an input 
+  #check
+#no input? current month calendar
+#one argument = month
+#two arguments = month + year
+#print a statement indicating format
+#exit the program
+
+date_input = input("month [year]")
+print(date_input)
+
+if (len(date_input) == 0):
+  print("calendar will go here")
+elif " " in date_input:
+  print("month/year calendar goes here")
+elif " " not in date_input:
+  print("month of current year only")
