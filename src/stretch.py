@@ -3,7 +3,7 @@ class Character:
         self.species = species
         self.classification = classification
     
-class Hero:
+class Hero(Character):
     def __init__(self, name, species, classification, location, nobility, virtue):
         self.species = species
         self.name = name
@@ -15,7 +15,7 @@ class Hero:
     def description(self):
         print(f"{self.name} is a {self.classification} with a nobility level of {self.nobility}")
 
-class Villain:
+class Villain(Character):
     def __init__(self, name, species, classification, location, cunning, badness):
         self.name = name
         self.species = species
