@@ -33,10 +33,14 @@ from datetime import datetime
 
 date_input = input("month [year]")
 print(date_input)
-
+c = calendar.TextCalendar(calendar.SUNDAY)
 if (len(date_input) == 0):
-  print("calendar will go here")
+  now = datetime.now()
+  c_for_use = c.formatmonth(now.year, now.month)
+  print(c_for_use)
 elif " " in date_input:
   print("month/year calendar goes here")
 elif " " not in date_input:
   print("month of current year only")
+else: 
+  print("mwahahaha")
