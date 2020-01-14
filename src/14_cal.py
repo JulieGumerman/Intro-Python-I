@@ -31,18 +31,22 @@ from datetime import datetime
 #print a statement indicating format
 #exit the program
 
-date_input = input("State month and year. Please use numeric values, like 08/2020:    ")
+date_input = input("State month and year. Please use MM/YYYY format:    ")
 c = calendar.TextCalendar(calendar.SUNDAY)
 now = datetime.now()
-if (len(date_input) == 0):
-  c_for_use = c.formatmonth(now.year, now.month)
-  print(c_for_use)
-elif "/" in date_input:
-  split_date = date_input.split("/")
-  c_for_use = c.formatmonth(int(split_date[1]), int(split_date[0]))
-  print(c_for_use)
-elif "/" not in date_input:
-  c_for_use = c.formatmonth(now.year, int(date_input))
-  print(c_for_use)
-else: 
-  print("mwahahaha")
+
+
+
+try:
+  if (len(date_input) == 0):
+    c_for_use = c.formatmonth(now.year, now.month)
+    print(c_for_use)
+  elif "/" in date_input:
+    split_date = date_input.split("/")
+    c_for_use = c.formatmonth(int(split_date[1]), int(split_date[0]))
+    print(c_for_use)
+  elif "/" not in date_input:
+    c_for_use = c.formatmonth(now.year, int(date_input))
+    print(c_for_use)
+except:
+  print("Please use 00/0000 format")
