@@ -36,7 +36,6 @@ c = calendar.TextCalendar(calendar.SUNDAY)
 now = datetime.now()
 
 
-
 try:
   if (len(date_input) == 0):
     c_for_use = c.formatmonth(now.year, now.month)
